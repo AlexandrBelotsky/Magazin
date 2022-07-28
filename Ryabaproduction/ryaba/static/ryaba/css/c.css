@@ -1,0 +1,48 @@
+/*Заголовок */
+#zag{
+	color:red;
+	font-size:4rem;
+	text-align:center;
+}
+
+/* выравниваем по центру картинку*/
+#t{
+    display: block;
+    margin: auto;
+}
+#p{
+    text-align:center;
+}
+/* регистрация */
+.reg a{
+     display: inline;
+     color: rgb(111, 0, 0);
+     padding: 15px;
+
+
+}
+.reg a:hover{
+    color:red;
+}
+a {
+    color: rgb(1, 1, 131);
+    text-decoration: none;
+
+}
+a:hover{
+    color: rgb(1, 1, 252);
+    }
+
+/*Картинки в один лайн*/
+.img {
+    display: inline;
+    margin-right: 15px;
+}
+/* расстояние между ссылками*/
+.ssilki a{
+   display: inline;
+   padding: 155px;
+}
+.zakaz a{
+    padding: 25px;
+}

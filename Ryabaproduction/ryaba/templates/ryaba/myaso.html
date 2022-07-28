@@ -1,0 +1,53 @@
+{% extends 'ryaba/Osnova.html' %}
+{% load static %}
+
+{%block title %}
+Мясные продукты
+{% endblock %}
+
+{%block content %}
+<div><h3 class="reg" align="left">
+        <a href="{% url 'main' %}">Вернуться на главную</a>
+</div>
+<div>
+    <img src="{% static "ryaba/img/konina.png" %}"  width='270px' height="270px" hspace="15" vspace="20" >
+    {% for i in info %}
+    <ul>
+        <li>Название: {{ i.name }}</li>
+        <li>Цена: {{ i.price }}</li>
+        <li>К-ство: {{ i.count }}</li>
+        <li>Наличие: {{ i.availability }}</li>
+    </ul>
+    {% endfor %}
+</div>
+<h4 class="zakaz">
+    <a href="{% url 'zakaz' %}" target="_blank">Оформить заказ</a></h4>
+<br>
+<div>
+    <img src="{% static "ryaba/img/kur.png" %}"  width='270px' height="270px" hspace="15" vspace="20" >
+    {% for i in info2 %}
+    <ul>
+        <li>Название: {{ i.name }}</li>
+        <li>Цена: {{ i.price }}</li>
+        <li>К-ство: {{ i.count }}</li>
+        <li>Наличие: {{ i.availability }}</li>
+    </ul>
+    {% endfor %}
+</div>
+<h4 class="zakaz">
+    <a href="{% url 'zakaz' %}" target="_blank">Оформить заказ</a></h4>
+<br>
+<div>
+    <img src="{% static "ryaba/img/ind.png" %}"  width='270px' height="270px" hspace="15" vspace="20" >
+    {% for i in info3 %}
+    <ul>
+        <li>Название: {{ i.name }}</li>
+        <li>Цена: {{ i.price }}</li>
+        <li>К-ство: {{ i.count }}</li>
+        <li>Наличие: {{ i.availability }}</li>
+    </ul>
+    {% endfor %}
+</div>
+<h4 class="zakaz">
+    <a href="{% url 'zakaz' %}" target="_blank">Оформить заказ</a></h4>
+{% endblock %}

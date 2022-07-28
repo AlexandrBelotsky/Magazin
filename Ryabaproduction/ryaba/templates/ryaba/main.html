@@ -1,0 +1,34 @@
+{% extends 'ryaba/Osnova.html' %}
+{% load static %}
+{% block title %}
+Наша Ряба
+{% endblock %}
+
+{% block content%}
+<div><h3 class="reg" align="right">
+    <a href="{% url 'regist' %}" target="_blank">Регистрация</a>
+    {% if user.is_authenticated %}
+    <a href="{% url 'logout' %}">Выйти</a>
+    {% else %}
+    <a href="{% url 'login' %}" target="_blank">Авторизация</a>
+    {% endif %}
+</h3></div>
+
+<h1 id='zag'>Наша Ряба</h1>
+<img id='t' src="{% static "ryaba/img/Ryaba.png" %}"  width='270px' height="270px">
+<br>
+<h1 id="p">Здесь вы можете просмотреть молочные и мясные продукты, а так же посудные товары</h1>
+<br>
+<div class="img">
+<img src="{% static "ryaba/img/maso.png" %}"  width='270px' height="270px" hspace="180" vspace="20" >
+<img src="{% static "ryaba/img/mol.png" %}"  width='270px' height="270px" hspace="150" vspace="20">
+<img src="{% static "ryaba/img/posuda.png" %}"  width='270px' height="270px" hspace="150" vspace="20" >
+</div>
+
+<div><h1 class="ssilki">
+    <a href="{% url 'myaso' %}" target="_blank">Мясные продукты</a>
+    <a href="{% url 'moloko' %}" target="_blank">Молочные продукты</a>
+    <a href="{% url 'posuda' %}" target="_blank">Посудный ассортимент</a></h1>
+</div>
+
+{% endblock %}

@@ -1,0 +1,25 @@
+{% extends 'ryaba/Osnova.html' %}
+{% load static %}
+
+{% block title %}
+Регистрация
+{% endblock %}
+
+{% block content %}
+<div><h3 class="regis" align="right">
+    <a href="{% url 'main' %}">Вернуться на главную</a></h3>
+</div>
+
+<div align="center">
+<h3>Авторизация</h3>
+    <form method="post" action=".">
+        {% csrf_token %}
+        <label for="username">Логин</label>
+        <input type="text" class="form-control" id="username" name="username"><br><br>
+        <label for="password">Пароль</label>
+        <input type="password" class="form-control" id="password" name="password"><br><br>
+        <button type="submit" class="btn btn-primary">Войти</button>
+    </form>
+</div>
+
+{% endblock %}
